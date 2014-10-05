@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+{% block content %}
+<div align="center">
+<h1>Hot Fuzz</h1>
+<p>Fuzzy Search Logic</p>
+</div>
+
+<div class="container col-12">
+<h2>Search: <input data-bind="value: query, valueUpdate: 'afterkeydown', event:{keyup:update}" /></h2>
+<p>Example <strong>"depbus"</strong> returns Department for Business, Innovation & Skills</p>
+<p>---</p>
+<h4>UK Ministries</h4>
+<ul data-bind="foreach: ministries">
+	<li><span data-bind="text: name"></span></li>
+</ul>
+
+</div>
+{% endblock %}
